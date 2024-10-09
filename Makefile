@@ -1,10 +1,10 @@
 obj-m += samsung-galaxybook.o
 SRC := $(shell pwd)
 
-all:
+default:
 	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules
 
-modules_install:
+install:
 	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
 
 clean:
